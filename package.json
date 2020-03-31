@@ -1,0 +1,15 @@
+{
+  "name": "waiter-promise",
+  "version": "1.0.0",
+  "description": "a enhanced promise",
+  "main": "index.js",
+  "keywords": [
+    "promise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WangLeto/waiter-promise"
+  },
+  "author": "leto",
+  "license": "MIT"
+}
