@@ -11,7 +11,7 @@ npm i -S waiter-promise
 ## use
 
 ```javascript
-import Waiter from 'waiter-promise'
+import { Waiter } from 'waiter-promise'
 
 const waiterA = new Waiter()
 
