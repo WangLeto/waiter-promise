@@ -1,6 +1,6 @@
 {
   "name": "waiter-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a enhanced promise",
   "main": "index.js",
   "keywords": [
