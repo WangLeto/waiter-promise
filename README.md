@@ -16,12 +16,12 @@ import { Waiter } from 'waiter-promise'
 const waiterA = new Waiter()
 
 console.log(waiterA.settled) // -> false
-waiterA.promise.then(() => {
+waiterA.then(() => {
   console.log(waiterA.result, waiterA.settled) // -> something true
 })
 
 const waiterB = new Waiter()
-waiterB.promise.then(() => {}, () => {
+waiterB.then(() => {}, () => {
   console.log(waiterB.reason, waiterB.settled) // -> bad thing true
 })
 

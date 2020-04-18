@@ -5,6 +5,7 @@ export class Waiter {
       this._private.resolve = resolve
       this._private.reject = reject
     })
+    this.then = this.promise.then.bind(this.promise)
     this.settled = false
     this.result = null
     this.reason = null
