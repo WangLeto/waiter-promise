@@ -1,4 +1,4 @@
-# waiter-promise -- enhanced promise
+# waiter-promise -- an enhanced promise library
 
 By using Waiter, you can easily split promise's resolve method and reject method from its declaration, and you can take the future advance of `settled` property, or get `result` of resolve or `reason` of reject anytime.
 
@@ -21,7 +21,7 @@ waiterA.then(() => {
 })
 
 const waiterB = new Waiter()
-waiterB.then(() => {}, () => {
+waiterB.catch(() => {
   console.log(waiterB.reason, waiterB.settled) // -> bad thing true
 })
 

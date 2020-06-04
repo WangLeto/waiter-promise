@@ -6,6 +6,7 @@ export class Waiter {
       this._private.reject = reject
     })
     this.then = this.promise.then.bind(this.promise)
+    this.catch = this.promise.catch.bind(this.promise)
     this.settled = false
     this.result = null
     this.reason = null
@@ -25,3 +26,5 @@ export class Waiter {
     this._private.reject(reason)
   }
 }
+
+export default Waiter
