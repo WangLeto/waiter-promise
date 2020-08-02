@@ -15,12 +15,18 @@ export class Waiter {
   }
 
   resolve (obj) {
+    if (this.settled) {
+      return
+    }
     this.settled = true
     this.result = obj
     this._private.resolve(obj)
   }
 
   reject (reason) {
+    if (this.settled) {
+      return
+    }
     this.settled = true
     this.reason = reason
     this._private.reject(reason)
