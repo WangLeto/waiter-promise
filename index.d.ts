@@ -1,5 +1,5 @@
 declare module 'waiter-promise' {
-  class Waiter<T, K> {
+  class Waiter<T = void, K = void> {
     public readonly promise: Promise<any>
     public readonly then: Promise<T>['then']
     public readonly result: T
