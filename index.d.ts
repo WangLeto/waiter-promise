@@ -1,13 +1,13 @@
 declare module 'waiter-promise' {
-  class Waiter<T = void, K = void> {
+  export class Waiter<Result = void, RejectReason = void> {
     public readonly promise: Promise<any>
-    public readonly then: Promise<T>['then']
-    public readonly result: T
-    public readonly reason: K
-    public readonly resolve: (result: T) => void
-    public readonly reject: (reason: K) => void
+    public readonly then: Promise<Result>['then']
+    public readonly result: Result
+    public readonly reason: RejectReason
+    public readonly resolve: (result: Result) => void
+    public readonly reject: (reason: RejectReason) => void
     public readonly settled: boolean
-    public readonly catch: Promise<K>['catch']
+    public readonly catch: Promise<RejectReason>['catch']
   }
-  export = Waiter
+  export default Waiter
 }
