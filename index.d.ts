@@ -1,9 +1,9 @@
 declare module 'waiter-promise' {
   export class Waiter<Result = void, RejectReason = void> {
-    public readonly promise: Promise<any>
+    public readonly promise: Promise<Result>
     public readonly then: Promise<Result>['then']
-    public readonly result: Result
-    public readonly reason: RejectReason
+    public readonly result: Result | null
+    public readonly reason: RejectReason | null
     public readonly resolve: (result: Result) => void
     public readonly reject: (reason: RejectReason) => void
     public readonly settled: boolean

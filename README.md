@@ -6,12 +6,17 @@ Waiter is one of [Deferred](https://stackoverflow.com/questions/6801283/what-are
 
 ```shell
 npm i -S waiter-promise
+
+# or with yarn
+yarn add waiter-promise
 ```
 
 ## use
 
+Use in JavaScript Promise:
+
 ```javascript
-import { Waiter } from 'waiter-promise'
+import Waiter from 'waiter-promise'
 
 const waiterA = new Waiter()
 
@@ -27,4 +32,22 @@ waiterB.catch(() => {
 
 waiterA.resolve('something result')
 waiterB.reject('reject reason')
+```
+
+Use with async/await:
+
+```typescript
+import Waiter from 'waiter-promise'
+
+const waiter = new Waiter<string>()
+
+const receive = async (): Promise<void> => {
+  const res = await waiter.promise
+  console.log(res)
+}
+
+const send = () => waiter.resolve('hello world')
+
+send()
+receive() // output: hello world
 ```
